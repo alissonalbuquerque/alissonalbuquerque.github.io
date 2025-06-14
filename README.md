@@ -10,3 +10,6 @@ bundle install
 bundle exec jekyll serve
 ```
 
+```bash
+ruby cli make:post --name="New Post" --markdown
+```

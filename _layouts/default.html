@@ -18,16 +18,16 @@
       <div class="container">
         <nav class="navbar navbar-expand-lg">
           <div class="container-fluid">
-            <a class="navbar-brand" href="{{ '/' }}">Alisson Albuquerque</a>
-            <a class="navbar-brand" href="{{ '/about/' }}">Sobre</a>
+            <a class="navbar-brand" href="{{ site.data.routes.home }}">{{ site.data.strings.name }}</a>
+            <a class="navbar-brand" href="{{ site.data.routes.about }}">{{ site.data.strings.about }}</a>
           </div>
         </nav>
       </div>
 
     </header>
 
-    <main class="flex flex-grow-1 m-4">
-      <div class="container px-4">
+    <main class="flex flex-grow-1">
+      <div class="container my-4">
         {{ content }}
       </div>
     </main>
@@ -36,11 +36,11 @@
 
       <div class="container">
         <div class="text-center">
-          <a class="btn text-black fs-3 me-2" href="#" role="button"> <i class="bi bi-github"></i> </a>
-          <a class="btn text-black fs-3 me-2" href="#" role="button"> <i class="bi bi-instagram"></i> </a>
+          {% include components/GithubButton.liquid %}
+          {% include components/InstagramButton.liquid %}
         </div>
         <div class="text-center">
-          © 2025 Alisson Albuquerque. Todos os direitos reservados.
+          {{ site.data.strings.copyright }}
         </div>
       </div>
 

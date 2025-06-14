@@ -1,0 +1,58 @@
+require 'optparse'
+require_relative 'commands\MakePost'
+
+
+
+command = ARGV[0]
+options = {
+  :name      => nil,
+  :extension => nil,
+}
+
+OptionParser.new do |opts|
+
+  opts.banner = <<~STR
+
+    ruby cli <command> [options]
+
+    commands:
+      make:post            -> Cria novo Post
+
+    options:
+      -n=NAME, --name=NAME -> Atribui nome para comandos suportados: 'make:post'
+      --md                 -> Extensão de arquivo .md
+      --html               -> Extensão de arquivo .html
+      --markdown           -> Extensão de arquivo .markdown
+      -h, --help           -> Exibe Opções de Ajuda
+
+  STR
+
+  opts.on('-n=NAME', '--name=NAME', 'Atribui nome para comandos suportados: \'make:post\'') do |name|
+    options[:name] = name
+  end
+
+  opts.on('--md', 'Extensão de arquivo .md') do
+    options[:extension] = '.md'
+  end
+
+  opts.on('--html', 'Extensão de arquivo .html') do
+    options[:extension] = '.html'
+  end
+
+  opts.on('--markdown', 'Extensão de arquivo .markdown') do
+    options[:extension] = '.markdown'
+  end
+
+  opts.on('-h', '--help', 'Exibe Opções de Ajuda') do
+    puts opts.banner
+    exit
+  end
+
+end.parse!
+
+case command
+  when 'make:post'
+    MakePost.new(command, options).execute()
+  else
+    puts "Commando não encontrado!"
+end
