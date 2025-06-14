@@ -5,6 +5,7 @@ command = ARGV[0]
 options = {
   :name      => nil,
   :extension => nil,
+  :draft     => nil,
 }
 
 OptionParser.new do |opts|
@@ -18,6 +19,7 @@ OptionParser.new do |opts|
 
     options:
       -n=NAME, --name=NAME -> Atribui nome para comandos suportados: 'make:post'
+      --draft              -> Criar post no diretório de rascunho
       --md                 -> Extensão de arquivo .md
       --html               -> Extensão de arquivo .html
       --markdown           -> Extensão de arquivo .markdown
@@ -39,6 +41,10 @@ OptionParser.new do |opts|
 
   opts.on('--markdown', 'Extensão de arquivo .markdown') do
     options[:extension] = '.markdown'
+  end
+
+  opts.on('--draft', 'Criar post no diretório de rascunho') do
+    options[:draft] = true
   end
 
   opts.on('-h', '--help', 'Exibe Opções de Ajuda') do

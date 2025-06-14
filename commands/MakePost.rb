@@ -1,7 +1,10 @@
 class MakePost
+  PATH_POST  = '_posts/'
+  PATH_DRAFT = '_drafts/'
+
   attr_accessor :command, :options
   attr_reader :date, :base_path, :file_name
-  attr_reader :name, :extension
+  attr_reader :name, :extension, :draft
 
   def initialize(command, options)
     @command = command
@@ -10,7 +13,8 @@ class MakePost
   end
 
   def init_options()
-    @base_path = '_posts/'
+    @draft     = options[:draft] || false
+    @base_path = @draft ? PATH_DRAFT : PATH_POST
     @date      = Time.now.strftime('%Y-%m-%d'+'-')
     @file_name = (options[:name] || 'new-post').downcase.gsub(' ', '-')
     @extension = (options[:extension] || '.markdown')
