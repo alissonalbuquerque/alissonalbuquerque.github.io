@@ -1,5 +1,5 @@
 require 'optparse'
-require_relative 'commands\MakePost'
+require_relative 'commands/MakePost'
 
 command = ARGV[0]
 options = {

@@ -1,0 +1,31 @@
+{% assign day_week  = include.date | date: "%A"  %}
+{% assign day       = include.date | date: "%d"  %}
+{% assign month_num = include.date | date: "%-m" %}
+{% assign year      = include.date | date: "%Y"  %}
+
+{% case day_week %}
+  {% when "Monday"    %} {% assign day_week = "segunda-feira" %}
+  {% when "Tuesday"   %} {% assign day_week = "terça-feira"   %}
+  {% when "Wednesday" %} {% assign day_week = "quarta-feira"  %}
+  {% when "Thursday"  %} {% assign day_week = "quinta-feira"  %}
+  {% when "Friday"    %} {% assign day_week = "sexta-feira"   %}
+  {% when "Saturday"  %} {% assign day_week = "sábado"        %}
+  {% when "Sunday"    %} {% assign day_week = "domingo"       %}
+{% endcase %}
+
+{% case month_num %}
+  {% when "1"  %} {% assign month = "janeiro"   %}
+  {% when "2"  %} {% assign month = "fevereiro" %}
+  {% when "3"  %} {% assign month = "março"     %}
+  {% when "4"  %} {% assign month = "abril"     %}
+  {% when "5"  %} {% assign month = "maio"      %}
+  {% when "6"  %} {% assign month = "junho"     %}
+  {% when "7"  %} {% assign month = "julho"     %}
+  {% when "8"  %} {% assign month = "agosto"    %}
+  {% when "9"  %} {% assign month = "setembro"  %}
+  {% when "10" %} {% assign month = "outubro"   %}
+  {% when "11" %} {% assign month = "novembro"  %}
+  {% when "12" %} {% assign month = "dezembro"  %}
+{% endcase %}
+
+{{ day_week }}, {{ day }} de {{ month }} de {{ year }}
