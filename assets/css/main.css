@@ -1,0 +1,9 @@
+.card-size {
+  max-width: 20rem;
+}
+
+.card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}

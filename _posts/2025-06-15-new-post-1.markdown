@@ -1,0 +1,8 @@
+---
+layout: post
+title:  "New Post 1"
+date:   2025-06-15 16:01:24 -0300
+categories: 
+describe: "Resumo do post com imagem."
+thumbnail: 'https://placehold.co/1600x900'
+---
