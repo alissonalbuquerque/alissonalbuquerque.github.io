@@ -2,11 +2,16 @@
 layout: default
 ---
 
-<div class="row">
+<div class="row justify-content-center g-0">
   {% for post in site.posts %}
-    <div class="col">
-      {% include components/card.liquid url=post.url title=post.title describe=post.describe thumbnail=post.thumbnail %}
-    </div>
+    
+    {% include components/card.liquid url=post.url title=post.title describe=post.describe thumbnail=post.thumbnail %}
+
+    <!--  -->
+    {% include components/card.liquid url=post.url title=post.title describe=post.describe thumbnail=post.thumbnail %}
+    <!--  -->
+    {% include components/card.liquid url=post.url title=post.title describe=post.describe thumbnail=post.thumbnail %}
+    <!--  -->
+    
   {% endfor %}
 </div>
-

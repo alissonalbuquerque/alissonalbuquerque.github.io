@@ -1,28 +1,108 @@
 /** Font Oxanium */
 @import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;500;600;700;800&display=swap');
 
-.card-size {
-  max-width: 20rem;
+:root {
+  --bg-main:#121212;
+  --bg-surface:#1E1E1E;
+
+  --text-primary:#FFFFFFDE;
+  --text-secondary:#FFFFFF99;
+  --text-disabled:#FFFFFF61;
+
+  --font-weight-300: 300;
+  --font-weight-400: 400;
+  --font-weight-500: 500;
+  --font-weight-600: 600;
+  --font-weight-700: 700;
+  --font-weight-800: 800;
+
+  --color-primary:#4CAF50;
+  --divider:#FFFFFF1F;
 }
 
-.card-link {
-  text-decoration: none;
-  color: inherit;
-  display: block;
+.w-80 {
+  width: 80% !important;
+}
+
+.w-85 {
+  width: 85% !important;
+}
+
+.w-90 {
+  width: 90% !important;
+}
+
+.--bg-primary {
+  background-color: var(--bg-main);
+}
+
+.--bg-secondary {
+  background-color: var(--bg-surface);
+}
+
+.--text-primary {
+  color: var(--text-primary);
+}
+
+.--text-secondary {
+  color: var(--text-secondary);
+}
+
+.--font-weight-300 {
+  font-weight: var(--font-weight-300)
+}
+
+.--font-weight-400 {
+  font-weight: var(--font-weight-400)
+}
+
+.--font-weight-500 {
+  font-weight: var(--font-weight-500)
+}
+
+.--font-weight-600 {
+  font-weight: var(--font-weight-600)
+}
+
+.--font-weight-700 {
+  font-weight: var(--font-weight-700)
+}
+
+.--font-weight-800 {
+  font-weight: var(--font-weight-800)
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
   font-family: 'Oxanium', sans-serif;
 }
+
+.--card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+/*  */
+
 .title {
   font-size: 2.5em;
 }
+
 .subtitle {
   font-size: 1.5em;
 }
+
 .publish-date {
   font-size: 1em;
 }
+
 .badge-custom {
-  font-size: 1em;
+  font-size: 2em;
 }
+

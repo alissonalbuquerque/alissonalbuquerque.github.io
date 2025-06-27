@@ -28,17 +28,21 @@ class MakePost
 
     layout     = 'post'
     title      = (options[:name] || 'New Post')
+    describe   = 'Subtitle: '.concat(options[:name] || 'New Post')
     datetime   = Time.now.strftime('%Y-%m-%d %H:%M:%S %z')
     categories = ''
+    thumbnail  = 'https://placehold.co/1600x900'
 
     File.open(self.path, "w") do |file|
       file.puts(
         <<~FILE
         ---
-        layout: #{layout}
-        title:  "#{title}"
-        date:   #{datetime}
-        categories: #{categories}
+        layout     : #{layout}
+        title      : "#{title}"
+        describe   : "#{describe}"
+        date       : #{datetime}
+        categories : [#{categories}]
+        thumbnail  : #{thumbnail}
         ---
         FILE
       )

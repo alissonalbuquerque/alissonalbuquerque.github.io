@@ -1,11 +1,20 @@
-<div class="card card-size">
-  <a href="{{ include.url }}" class="card-link">
-    <img src="{{ include.thumbnail }}" class="card-img-top" alt="Thumbnail">
-    <div class="card-body">
-      <div class="text-center">
-        <h5 class="card-title">{{ include.title }}</h5>
-        <p class="card-text">{{ include.describe }}</p>
+<div class="col-xxl-2 col-xl-3 col-lg-4 col-md-6 col-sm-12 col-12 my-2">
+
+  <div class="card h-100 mx-2">
+    
+    <a href="{{ include.url }}" class="--card-link">
+
+      <img src="{{ include.thumbnail }}" class="card-img-top" alt="{{ include.title }}">
+
+      <div class="card-body">  
+        <div class="text-center">
+          <h5 class="card-title">{{ include.title }}</h5>
+          <p class="card-text">{{ include.describe }}</p>
+        </div>
       </div>
-    </div>
-  </a>
+
+    </a>
+
+  </div>
+  
 </div>

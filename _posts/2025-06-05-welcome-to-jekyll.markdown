@@ -1,10 +1,10 @@
 ---
-layout: post
-title:  "Welcome to Jekyll!"
-date:   2025-06-05 11:17:12 -0300
-categories: jekyll update
-describe: "Resumo do post com imagem."
-thumbnail: 'https://placehold.co/1600x900'
+layout     : post
+title      : "Welcome to Jekyll!"
+describe   : "Welcome to Jekyll"
+date       :   2025-06-05 11:17:12 -0300
+categories : [jekyll, update]
+thumbnail  : 'https://placehold.co/1600x900'
 ---
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 

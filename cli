@@ -59,4 +59,5 @@ case command
     MakePost.new(command, options).execute()
   else
     puts "Commando não encontrado!"
+    puts "Execute 'ruby cli --help' para mais informações!"
 end
