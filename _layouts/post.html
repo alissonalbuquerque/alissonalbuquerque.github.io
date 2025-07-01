@@ -2,17 +2,23 @@
 layout: default
 ---
 
-<div class="d-flex justify-content-center">
-  <div class="col-md-8">
-    <div class="mb-2">
-      {% include components/blog/Title.liquid       text=page.title            %}
-      {% include components/blog/Subtitle.liquid    text=page.subtitle         %}
+<div class="row justify-content-center">
+  
+  <div class="col-lg-6 col-md-8 col-sm-8 col-12">
+
+    <div class="mb-4">
+      {% include components/blog/Title.liquid    text=page.title %}
+      {% include components/blog/Subtitle.liquid text=page.describe %}      
     </div>
-    <div class="mt-5">
-      {% include components/blog/PublishDate.liquid date=page.date             %}
+
+    <div class="my-5">
+      {% include components/blog/PublishDate.liquid date=page.date %}
       {% include components/blog/Categories.liquid  categories=page.categories %}
     </div>
-      
-    {{ content }}
+
+    <div class="mb-5 px-4">
+      {{ content }}
+    </div>
+
   </div>
 </div>

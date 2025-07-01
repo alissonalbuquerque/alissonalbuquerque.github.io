@@ -6,3 +6,5 @@ date       : 2025-06-24 11:15:38 -0300
 categories : [blog, ruby]
 thumbnail  : 'https://placehold.co/1600x900'
 ---
+
+Post em Construção

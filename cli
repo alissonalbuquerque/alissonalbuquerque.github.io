@@ -16,6 +16,7 @@ OptionParser.new do |opts|
 
     commands:
       make:post            -> Cria novo Post
+      time:now             -> Imprime um TimeStamp
 
     options:
       -n=NAME, --name=NAME -> Atribui nome para comandos suportados: 'make:post'
@@ -57,6 +58,8 @@ end.parse!
 case command
   when 'make:post'
     MakePost.new(command, options).execute()
+  when 'time:now'
+    puts Time.now.strftime('%Y-%m-%d %H:%M:%S %z')
   else
     puts "Commando não encontrado!"
     puts "Execute 'ruby cli --help' para mais informações!"
