@@ -7,7 +7,7 @@ categories : ['blog', 'laravel', 'php', 'design pattern']
 thumbnail  : https://placehold.co/1600x900
 ---
 
-O __Repository__ é um *Padrão de Projeto* responsável por tratar operações de acesso a recursos de uma aplicação de forma isolada, abstraída e desacoplada do restante do código, facilitando a manutenção e reuso caso seja necessário.
+<!-- O __Repository__ é um *Padrão de Projeto* responsável por tratar operações de acesso a recursos de uma aplicação de forma isolada, abstraída e desacoplada do restante do código, facilitando a manutenção e reuso caso seja necessário.
 {:.--p}
 
 No __Laravel__ não existe implementação nativa do repository, mas com poucas classes, interfaces e configurações é possível adicionar uma camada de persistência e consulta a partir de repositórios em sua aplicação. Esse post tem o objetivo de apresentar a implementação de repository em uma aplicação laravel com o uso de injeção de dependências com recursos nativos do framework.
@@ -17,9 +17,9 @@ O __Repository__ é uma `classe` que implementa uma `interface` com as opções 
 {:.--p}
 
 `app\Repositories\Contracts\UserRepositoryInterface.php`
-`app\Repositories\Eloquent\UserRepository.php`
+`app\Repositories\Eloquent\UserRepository.php` -->
 
-```php
+{% capture interface_php %}
 <?php
 
 namespace App\Repositories\Contracts;
@@ -28,9 +28,12 @@ use App\Models\User;
 
 interface UserRepositoryInterface {
 
-    public function create(array $data): User
-    public function update(string|int $id, array $data): ?User
-    public function findById(string|int $id): ?User
-    public function delete(string|int $id): bool|null
+  public function create(array $data): User;
+  public function update(string|int $id, array $data): ?User;
+  public function findById(string|int $id): ?User;
+  public function delete(string|int $id): bool|null;
+
 }
-```
+{% endcapture %}
+
+{% include components/blog/Code.liquid lang="php" code=interface_php %}

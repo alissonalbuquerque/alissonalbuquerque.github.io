@@ -1,0 +1,13 @@
+<div class="--code-container">
+
+  <div class="--code-header">
+    <span class="--tag-lang --tag-lang-{{ include.lang }}">{{ include.lang }}</span>
+  </div>
+
+  <pre><code class="language-{{ include.lang }}">{{ include.code | strip }}</code></pre>
+
+  <button class="--copy-button">
+    <i class="bi bi-copy"></i>
+  </button>
+
+</div>
