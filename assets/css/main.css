@@ -110,6 +110,21 @@ code {
   line-height: 2em;
 }
 
+.--h1 {
+  font-size: 2.5em;
+  color: var(--text-primary);
+}
+
+.--h2 {
+  font-size: 2em;
+  color: var(--text-primary);
+}
+
+.--h3 {
+  font-size: 1.5em;
+  color: var(--text-primary);
+}
+
 .--card-link {
   text-decoration: none;
   color: inherit;
